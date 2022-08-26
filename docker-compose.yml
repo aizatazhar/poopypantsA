@@ -8,9 +8,9 @@ services:
             - 8080:8080
         command: npm run start
 
-    nginx-sample:
+    nginx:
+        restart: always
         build:
-            context: ./nginx-sample
-        image: nginx:latest
+            context: ./nginx
         ports:
-            - 8000:80
+            - 80:80
