@@ -7,3 +7,10 @@ services:
         ports:
             - 8080:8080
         command: npm run start
+
+    nginx-sample:
+        build:
+            context: ./nginx-sample
+        image: nginx:latest
+        ports:
+            - 8000:80
